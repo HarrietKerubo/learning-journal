@@ -1,0 +1,79 @@
+@import url(fonts.css);
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 
+==================
+LAYOUT
+================== */
+
+header{
+
+padding-left: 1.25em; /* 20px */
+display: flex;
+justify-content: space-between;
+                     
+}
+
+
+
+/* 
+================
+CONTAINERS
+================ */
+
+.logo{
+    display: flex;
+    gap: 0.5em;
+ 
+   
+}
+.header-links{
+    display: flex;
+    gap: 1.75em;
+    padding-right: 1.5em;  /* 24px */
+    padding-top: 1.31em ; /* 21px */
+    padding-bottom: 1.44em; /* 23px */
+    
+}
+
+/* 
+==================
+IMAGES
+================== */
+.logo-img{
+    width: 23.16px;
+    padding-top: 1.0625em; /* 17px */
+    padding-bottom:1.187em ; /*19px*/  
+}
+
+
+/* ===================
+TYPOGRAPHY
+=================== */
+
+.header-links a{
+    color: #090909;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 0.75rem; /*12px */
+    font-weight: 600;
+    line-height: 15.08px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo-text {
+    color: #0E0E0E;
+    font-size: 0.875rem; /* 14px*/
+    line-height: 15px;
+    padding-top: 1.5em ; /* 24px */
+    
+}
+
