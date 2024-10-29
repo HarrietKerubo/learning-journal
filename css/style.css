@@ -19,8 +19,23 @@ justify-content: space-between;
                      
 }
 
+.hero-post{
+  
+    color:#ffffff;
+    padding-top: 5.437em; /*87px*/
+    padding-bottom: 1.56em;  /*25px*/
+    padding:5.437em 1.25em 1.56em 1.25em ;
 
+    
 
+}
+
+.hero-post::before{
+    background-image: url(/images/hero.png);
+    background-size: cover; /* or "cover" for a full cover */
+    background-position:bottom;    
+    transform: scaleX(-1);
+}
 /* 
 ================
 CONTAINERS
@@ -77,3 +92,22 @@ a {
     
 }
 
+.hero-post h1{
+    font-weight: 700;
+    font-size: 2rem; /*32pxpx*/
+    line-height: 35px;
+   
+}
+
+.hero-post h2{
+    font-weight: 400;
+    font-size: 0.75rem; /*12px*/
+    line-height: 15px;
+   
+}
+
+.hero-post p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20.11px;
+}
