@@ -20,22 +20,31 @@ justify-content: space-between;
 }
 
 .hero-post{
-  
+    background-image: url(/images/hero.png);
+    background-size: cover; /* or "cover" for a full cover */
+    background-position:bottom;
     color:#ffffff;
     padding-top: 5.437em; /*87px*/
     padding-bottom: 1.56em;  /*25px*/
     padding:5.437em 1.25em 1.56em 1.25em ;
+}
 
+.articles{
+    border: solid red;
+    max-width: 414px;
+    padding: 2.125em 1.25em 2.687em 1.25em;
+    }
+
+footer{
+    background: #202020;
+    color: #ececec;
+    text-align: center;
+    padding-top: 2.3em;
+    padding-bottom: 2.3em;
+    font-size: 0.75rem;
     
-
 }
 
-.hero-post::before{
-    background-image: url(/images/hero.png);
-    background-size: cover; /* or "cover" for a full cover */
-    background-position:bottom;    
-    transform: scaleX(-1);
-}
 /* 
 ================
 CONTAINERS
@@ -66,6 +75,11 @@ IMAGES
     padding-bottom:1.187em ; /*19px*/  
 }
 
+.articles img{
+    height: 232px;
+    width: 100%;
+    border-radius: 3px;
+}
 
 /* ===================
 TYPOGRAPHY
@@ -80,8 +94,19 @@ TYPOGRAPHY
 
 }
 
-a {
+.article-link, .header-links
+a{
     text-decoration: none;
+  }
+
+.article-link{
+    display: block;
+    text-align: center;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 20px;
+ 
 }
 
 .logo-text {
@@ -111,3 +136,16 @@ a {
     font-size: 1rem;
     line-height: 20.11px;
 }
+
+footer h2{
+  margin: 0;
+  font-weight: 700;
+  line-height: 12px;
+}
+
+footer p{
+    font-weight: 400;
+    line-height: 15px;
+    color: #D7D7D7;
+}
+
