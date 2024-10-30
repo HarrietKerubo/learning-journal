@@ -30,7 +30,6 @@ justify-content: space-between;
 }
 
 .articles{
-    border: solid red;
     max-width: 414px;
     padding: 2.125em 1.25em 2.687em 1.25em;
     }
