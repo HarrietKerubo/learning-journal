@@ -6,6 +6,10 @@ body {
     padding: 0;
 }
 
+/* ===============
+HOME PAGE
+================== */
+
 /* 
 ==================
 LAYOUT
@@ -20,14 +24,27 @@ justify-content: space-between;
 }
 
 .hero-post{
-    background-image: url(/images/hero.png);
-    background-size: cover; /* or "cover" for a full cover */
-    background-position:bottom;
+    position: relative;
     color:#ffffff;
     padding-top: 5.437em; /*87px*/
     padding-bottom: 1.56em;  /*25px*/
     padding:5.437em 1.25em 1.56em 1.25em ;
+    overflow: hidden;
+    
 }
+.hero-post::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images/hero.png);
+    background-size: cover;
+    background-position: bottom;
+    transform: scaleX(-1); /* Flip the background horizontally */
+    z-index: -1; /* Place the background behind the text */
+  }
 
 .articles{
     max-width: 414px;
@@ -51,9 +68,7 @@ CONTAINERS
 
 .logo{
     display: flex;
-    gap: 0.5em;
- 
-   
+    gap: 0.5em;  
 }
 .header-links{
     display: flex;
@@ -62,6 +77,11 @@ CONTAINERS
     padding-top: 1.31em ; /* 21px */
     padding-bottom: 1.44em; /* 23px */
     
+}
+
+article{
+    margin-bottom: 1em;
+    text-align: left;
 }
 
 /* 
@@ -93,18 +113,20 @@ TYPOGRAPHY
 
 }
 
-.article-link, .header-links
+.header-links
 a{
     text-decoration: none;
   }
 
-.article-link{
+.article-center-text{
     display: block;
     text-align: center;
     color: #000000;
     font-size: 1rem;
     font-weight: 700;
     line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
  
 }
 
@@ -136,6 +158,25 @@ a{
     line-height: 20.11px;
 }
 
+.article-date{
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 17.82px;
+
+}
+.article-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 25.97px;
+    
+}
+
+.article-body-preview{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 footer h2{
   margin: 0;
   font-weight: 700;
@@ -147,4 +188,66 @@ footer p{
     line-height: 15px;
     color: #D7D7D7;
 }
+/* 
+=====================
+POSTS PAGE
+===================== */
+/* 
+================
+LAYOUT
+================ */
 
+.article-main{
+padding: 2em 1.25em 2em 1.25em;
+max-width: 374px;
+color: #151515;
+}
+
+.details{
+    display: block;
+}
+.article-main img{
+    height: 191px;
+    width: 100% ;
+    border-radius: 3px;
+    transform: scaleX(-1); 
+    object-fit: cover;
+    object-position: bottom;
+    padding-top: 2.187em;
+    padding-bottom: 2.187em;
+  }
+
+  .post-articles{
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .post-articles article{
+    padding-top: 1.687rem;
+  }
+  /* 
+================
+TYPOGRAPHY
+================ */
+.article-main h2{
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 15.08px;
+   
+}
+.article-main h1{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 34.62px;
+    letter-spacing: -0.03em;
+}
+
+.article-main p, span {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 20.11px;
+    text-align: left;
+    margin: 0;
+    
+}
