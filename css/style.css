@@ -26,8 +26,6 @@ justify-content: space-between;
 .hero-post{
     position: relative;
     color:#ffffff;
-    padding-top: 5.437em; /*87px*/
-    padding-bottom: 1.56em;  /*25px*/
     padding:5.437em 1.25em 1.56em 1.25em ;
     overflow: hidden;
     
@@ -47,7 +45,6 @@ justify-content: space-between;
   }
 
 .articles{
-    max-width: 414px;
     padding: 2.125em 1.25em 2.687em 1.25em;
     }
 
@@ -60,6 +57,7 @@ footer{
     font-size: 0.75rem;
     
 }
+
 
 /* 
 ================
@@ -80,6 +78,7 @@ CONTAINERS
 }
 
 article{
+    
     margin-bottom: 1em;
     text-align: left;
 }
@@ -288,4 +287,42 @@ TYPOGRAPHY
     font-weight: 700;
     line-height: 37.69px;
     letter-spacing: -0.03em;
+}
+
+.hidden-articles{
+    display: none;
+}
+
+/* ================
+Media queries
+================  */
+@media(min-width:500px){
+
+    .hero-post {
+        padding-top: 17.94em ;
+        padding-bottom: 3.69em;
+        max-height: 448px;
+       }
+      .hero-post::before {
+        background-position: center 80%;
+        background-attachment: fixed;
+      }
+
+    .hidden-articles{
+        display: block;
+    }
+    .articles {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+    .articles article{
+           flex: 1 1 calc(33.33% - 20px); /* 3 articles with same gap*/
+         
+    }
+ 
 }
