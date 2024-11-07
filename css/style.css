@@ -229,21 +229,25 @@ color: #151515;
 ================
 TYPOGRAPHY
 ================ */
-.article-main h2{
+.article-main h2
+.about-main h2{
     margin: 0;
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 15.08px;
    
 }
-.article-main h1{
+.article-main h1,
+.about-main h1{
     font-size: 2rem;
     font-weight: 700;
     line-height: 34.62px;
     letter-spacing: -0.03em;
 }
 
-.article-main p, span {
+.article-main p, 
+span,
+.about-main p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 20.11px;
@@ -255,11 +259,30 @@ TYPOGRAPHY
 /* 
 =====================
 ABOUT PAGE
-===================== 
-
+===================== */
+/* 
 ================
-TYPOGRAPHY
+LAYOUT
 ================ */
+.about-main{
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+
+.break-para{
+    padding-top: 3.125em;
+}
+.profile{
+    width: 182px;
+    height: 182px;
+    object-fit: cover;
+    object-position: left;
+    border-radius: 50%;
+}
+
+/* ================
+TYPOGRAPHY
+================  */
 .about-main h1{
     font-size: 2.18rem;
     font-weight: 700;
