@@ -298,31 +298,40 @@ Media queries
     .hero-post {
             padding-top: 17.94em ;
             padding-bottom: 3.69em;
+            padding-left: 3.312em;
             max-height: 448px;
+            
         }
     .hero-post::before {
             background-position: center 80%;
             background-attachment: fixed;
         }
-
-    .hidden-articles{
-            display: block;
+    
+    .hero-post h2{
+            margin-left: 0 ;
         }
-    .articles{
+
+    .hero-post p{
+       max-width: 614px;
+    }
+
+    .articles, 
+    .hidden-articles {
 
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
+    
+           }
 
-    }
-
-    .articles article{
+    .articles article,
+    .hidden-articles article{
             flex: 1 1 calc(33.33% - 20px); /* 3 articles with same gap*/
-            
+         
         }
 
-    .article-main{
+   .article-main{
         padding-left: 0;
         padding-right: 0;
     }
@@ -345,14 +354,17 @@ Media queries
         
     }
     .article-main p,
-    .details{
+    .details,
+    .about-main-content
+    {
         margin-left: 7.5em;
         margin-right: 7.5em;
+    
     }
 
     .post-articles{
         display: flex;
-        justify-content: center;
+        justify-content:space-around;
         gap: 20px;
     }
 
@@ -360,6 +372,37 @@ Media queries
         display: block;
         width: 100%;
         margin: 0 auto 1em auto; 
+    }
+
+    .post-articles-section,
+    .articles{
+        padding-left: 3.312em;
+        padding-right: 3.312em;
+         }
+
+    .post-articles-section img,
+    .articles img,
+    .hidden-articles img{
+        object-fit: cover;
+        min-width: 150px;
+
+        }
+
+    .about-intro{
+        display: flex;
+        gap: 33px;
+        align-items: center;
+        padding-left: 0;
+
+    }
+
+ 
+    .about-intro-content h1{
+        font-size: 2rem;
+    }
+
+    .hidden-articles{
+        padding: 0 ;
     }
 
     }
