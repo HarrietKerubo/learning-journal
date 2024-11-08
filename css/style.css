@@ -93,7 +93,8 @@ IMAGES
     padding-bottom:1.187em ; /*19px*/  
 }
 
-.articles img{
+.articles img,
+.post-articles img{
     height: 232px;
     width: 100%;
     border-radius: 3px;
@@ -198,7 +199,6 @@ LAYOUT
 
 .article-main{
 padding: 2em 1.25em 2em 1.25em;
-max-width: 374px;
 color: #151515;
 }
 
@@ -212,19 +212,16 @@ color: #151515;
     transform: scaleX(-1); 
     object-fit: cover;
     object-position: bottom;
-    padding-top: 2.187em;
-    padding-bottom: 2.187em;
+    margin-top: 2.187em;
+    margin-bottom: 2.187em;
   }
 
   .post-articles{
-    padding-top: 0;
+    padding: 1.687em 1.25em 2.687em 1.25em;
     margin-top: 0;
   }
 
-  .post-articles article{
-    padding-top: 1.687rem;
-  }
-  /* 
+/* 
 ================
 TYPOGRAPHY
 ================ */
@@ -299,30 +296,70 @@ Media queries
 @media(min-width:500px){
 
     .hero-post {
-        padding-top: 17.94em ;
-        padding-bottom: 3.69em;
-        max-height: 448px;
-       }
-      .hero-post::before {
-        background-position: center 80%;
-        background-attachment: fixed;
-      }
+            padding-top: 17.94em ;
+            padding-bottom: 3.69em;
+            max-height: 448px;
+        }
+    .hero-post::before {
+            background-position: center 80%;
+            background-attachment: fixed;
+        }
 
     .hidden-articles{
-        display: block;
+            display: block;
+        }
+    .articles{
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
     }
-    .articles {
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-
-}
 
     .articles article{
-           flex: 1 1 calc(33.33% - 20px); /* 3 articles with same gap*/
-         
+            flex: 1 1 calc(33.33% - 20px); /* 3 articles with same gap*/
+            
+        }
+
+    .article-main{
+        padding-left: 0;
+        padding-right: 0;
     }
- 
-}
+
+    .article-main img{
+        height: 448px;
+        max-height: 448px; 
+        object-position: center 80%;
+        background-attachment: fixed;
+        padding-left: 3.3125em;
+        padding-right: 3.3125em;
+        box-sizing: border-box;
+    
+    }
+
+    .article-main h1,h2 {
+        
+        margin-left: 7.5rem ;
+
+        
+    }
+    .article-main p,
+    .details{
+        margin-left: 7.5em;
+        margin-right: 7.5em;
+    }
+
+    .post-articles{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .post-articles .article-center-text{
+        display: block;
+        width: 100%;
+        margin: 0 auto 1em auto; 
+    }
+
+    }
